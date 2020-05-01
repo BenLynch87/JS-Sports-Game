@@ -5,6 +5,7 @@ let goal1 = 0;
 const numshots1 = document.querySelector("#teamone-numshots");
 const shotButton1 = document.querySelector("#teamone-shoot-button")
 const numgoal1 = document.querySelector("#teamone-numgoals")
+const audio = document.getElementById("goal")
 shotButton1.addEventListener("click", function () {
     shots1++;
     numshots1.innerHTML = shots1;
@@ -12,6 +13,7 @@ shotButton1.addEventListener("click", function () {
     if (hit > .5) {
         goal1++;
         numgoal1.innerHTML = goal1;
+        audio.play();
     }
 })
 //Team 2 shoot code
@@ -27,6 +29,7 @@ shotButton2.addEventListener("click", function () {
     if (hit > .5) {
         goal2++;
         numgoal2.innerHTML = goal2;
+        audio.play();
     }
 })
 //Reset code
